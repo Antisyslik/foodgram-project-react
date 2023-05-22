@@ -107,10 +107,6 @@ class RecipeSerializer(serializers.ModelSerializer):
             'cooking_time'
         ]
 
-    # def get_ingredients(self, obj):
-    #     ingredients = RecipeIngredient.objects.filter(recipe=obj)
-    #     return RecipeIngredientSerializer(ingredients, many=True).data
-
     def get_is_favorited(self, obj):
         request = self.context.get('request')
         if request is None or request.user.is_anonymous:
