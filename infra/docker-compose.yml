@@ -8,7 +8,6 @@ services:
       - db_data:/var/lib/postgresql/data/
     env_file:
       - .env
-    restart: always
 
   backend:
     image: antisyslik/foodgram-backend:latest
